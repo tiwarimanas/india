@@ -1,4 +1,4 @@
-# india
+# india 
 🇮🇳 Celebrating 77 years of India's independence through a curated collection of projects, visuals, and resources. Explore the nation's journey and achievements. Join us in honoring India's spirit! 
 
 # Celebrating 77 Years of India's Independence 🇮🇳
@@ -30,8 +30,4 @@ Collaboration is encouraged! If you have insights, projects, or resources to enh
 Connect with us through this repository. Share your thoughts, suggestions, and contributions. Let's make this portfolio a true reflection of India's spirit and progress.
 
 Jai Hind! 🇮🇳
-
----
-
-[Explore the Portfolio](#) | [Contribution Guidelines](CONTRIBUTING.md)
 
