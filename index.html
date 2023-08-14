@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <style>
+        /* Import Google font - Poppins */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* 
+        body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+
+        /* .text-container {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+} */
+
+        #cursor {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 40px;
+            background-color: #ff9100da;
+            animation: blink 0.7s infinite;
+        }
+
+        .fs-10px {
+            font-size: 10px;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateAnimation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate {
+            animation: rotateAnimation 10s linear infinite;
+            /* 4s rotation, linear timing, infinite loop */
+        }
+
+        .imfit {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container " style="height: 100vh;">
+        <div style="width: max-content;" class="img position-absolute top-50 start-50 translate-middle">
+            <img style="height: 200px ; width: 200px;" class="rotate"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/1200px-Ashoka_Chakra.svg.png"
+                alt="Ashoka_Chakra">
+        </div>
+        <div class=" text-container position-relative fs-2 fw-bolder m-auto position-absolute top-50 start-50 translate-middle"
+            style="width:max-content;">
+            <span id="changing-text" class="pe-2"></span>
+            <span id="cursor"></span>
+        </div>
+        <button id="playButton" data-state="paused"
+            class=" btn btn-primary rounded-5 position-fixed bottom-0 end-0 m-3 z-3"><i
+                class="bi bi-play-fill bg-black rounded-5"></i> Vande Matram</button>
+    </div>
+
+    <div class="container d-none">
+        <iframe id="youtubePlayer" width="560" height="315" src="https://www.youtube.com/embed/3N4SRohMoEg?controls=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            autoplay allowfullscreen></iframe>
+    </div>
+    <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-5">
+                <div class="carousel-item active">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Delhi_fort.jpg/1200px-Delhi_fort.jpg"
+                        class="imfit d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.delhicapital.com/wp-content/uploads/2023/05/india-gate-Delhi-3-1024x589.jpg"
+                        class="imfit d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Panorama_of_Jallianwala_Bagh-IMG_6348.jpg"
+                        class="imfit d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.livemint.com/lm-img/img/2023/05/27/1600x900/new_Parliament_1685149662214_1685149662503.jpg"
+                        class="imfit d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://english.cdn.zeenews.com/sites/default/files/2022/10/03/1097982-mangalyaan.jpg"
+                        class="imfit d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 my-2">
+                <div class="card bg-black rounded-5">
+                    <img src="https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg"
+                        class="card-img-top  rounded-top-5" alt="India">
+                    <div class="card-body">
+                        <h5 class="card-title">Tiranga</h5>
+                        <p class="card-text fs-10px">
+                            The national flag of India, colloquially called Tiraṅgā (the tricolour), is a horizontal
+                            rectangular tricolour flag, the colours being of India saffron, white and India green; with
+                            the Ashoka Chakra, a 24-spoke wheel, in navy blue at its centre. It was adopted in its
+                            present form during a meeting of the Constituent Assembly held on 22 July 1947, and it
+                            became the official flag of the Union of India on 15 August 1947.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Flag_of_India"
+                            class="btn btn-warning rounded-5">Wikipedia <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 my-2">
+                <div class="card card-body bg-black rounded-5">
+                    <button class="btn btn-dark rounded-5 m-3 position-absolute top-0 end-0"
+                        id="toggleButton">Devanagari <i class="bi bi-translate"></i></button>
+                    <div id="englishText">
+                        <p>
+                            Vande Mataram<br>
+                            Sujalam Sufalam<br>
+                            Malayajasitalam<br>
+                            Shasyashyamalam<br>
+                            Mataram<br>
+                            Vande Mataram<br>
+                            <br>
+                            Shubhrajyotsnam<br>
+                            Pulakitayaminim<br>
+                            Phullakusumita<br>
+                            Drumadala-shobhinim<br>
+                            Suhasinim<br>
+                            Sumadhura Bhashinim<br>
+                            Sukhadam Varadam<br>
+                            Mataram<br>
+                            Vande Mataram
+                        </p>
+                    </div>
+                    <div id="devanagariText" style="display: none;">
+                        <p>
+                            वन्दे मातरम्।<br>
+                            सुजलाम् सुफलाम्<br>
+                            मलयजशीतलाम्<br>
+                            शस्यश्यामलाम् मातरम्।<br>
+                            वन्दे मातरम्।<br>
+                            <br>
+                            शुभ्रज्योत्स्नाम्<br>
+                            पुलकितयामिनीम्<br>
+                            फुल्लकुसुमित<br>
+                            द्रुमदलशोभिनीम्<br>
+                            सुहासिनीम्<br>
+                            सुमधुर भाषिणीम्<br>
+                            सुखदाम् वरदाम्<br>
+                            मातरम्॥<br>
+                            वन्दे मातरम्।
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 my-2">
+                <div class="card bg-black rounded-5">
+                    <img src="https://i.ytimg.com/vi/nUd7n2WJMwM/maxresdefault.jpg" class="card-img-top  rounded-top-5"
+                        alt="India">
+                    <div class="card-body">
+                        <h5 class="card-title">National Emblem</h5>
+                        <a href="https://youtu.be/nUd7n2WJMwM" class="btn btn-warning rounded-5">Youtube<i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 my-2">
+                <div class="card bg-black rounded-5">
+                    <img src="https://i.ytimg.com/vi/bdAr0YAQMjM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTqawNv0t5pz6R6Rr9x1O2qiIU8Q"
+                        class="card-img-top  rounded-top-5" alt="India">
+                    <div class="card-body">
+                        <h5 class="card-title">Indian Currency</h5>
+                        <a href="https://youtu.be/bdAr0YAQMjM" class="btn btn-warning rounded-5">Youtube<i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 my-2">
+                <div class="card bg-black rounded-5">
+                    <img src="https://i.ytimg.com/vi/h1oOUK8wMlU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTQrK_uYfAArgVbOxZ6LHjH5EPYw"
+                        class="card-img-top  rounded-top-5" alt="India">
+                    <div class="card-body">
+                        <h5 class="card-title">Making of National Flag</h5>
+                        <a href="https://youtu.be/h1oOUK8wMlU" class="btn btn-warning rounded-5">Youtube<i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 my-2">
+                <div class="card bg-black rounded-5">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/IndiaPolitical1893ConstablesHandAtlas.jpg/375px-IndiaPolitical1893ConstablesHandAtlas.jpg"
+                        class="card-img-top  rounded-top-5" alt="India">
+                    <div class="card-body">
+                        <h5 class="card-title">Indian independence movement</h5>
+                        <p class="card-text fs-10px">
+                            The Indian independence movement was a series of historic events with the ultimate aim of ending British rule in India also known as British Raj. It lasted from 1857 to 1947....
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Indian_independence_movement"
+                            class="btn btn-warning rounded-5">Wikipedia <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 my-2">
+                <div class="card bg-black rounded-5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/PM_Nehru_addresses_the_nation_from_the_Red_Fort_on_15_August_1947.jpg/509px-PM_Nehru_addresses_the_nation_from_the_Red_Fort_on_15_August_1947.jpg"
+                        class="card-img-top  rounded-top-5" alt="India">
+                    <div class="card-body">
+                        <h5 class="card-title">India After Independence</h5>
+                        <p class="card-text fs-10px">
+                            The history of independent India began when the country became an independent nation within the British Commonwealth on 15 August 1947. Direct administration by the British, which began in 1858, affected a political and economic unification of the subcontinent. When British rule came to an end in 1947, the subcontinent was partitioned along religious lines.....
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/History_of_the_Republic_of_India_(1947%E2%80%93present)"
+                            class="btn btn-warning rounded-5">Wikipedia <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 my-2">
+                <div class="card bg-black rounded-5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg/413px-Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg"
+                        class="card-img-top  rounded-top-5" alt="India">
+                    <div class="card-body">
+                        <h5 class="card-title">Mangalyaan</h5>
+                        <p class="card-text fs-10px">
+                            The Mars Orbiter Mission (MOM), nicknamed Mangalyaan, was launched by ISRO on November 5, 2013. It entered Mars' orbit on September 24, 2014, making India the first Asian nation to achieve this feat on its first try.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Mars_Orbiter_Mission"
+                            class="btn btn-warning rounded-5">Wikipedia <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+                
+                
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <br><br><br>
+        <h2 class="my-5 text-secondary fw-bolder">Stay tuned for more.. <span class="text-warning">Jai Hind!</span></h2>
+        <br><br><br>
+    </div>
+
+
+
+
+</body>
+<script>
+
+    const toggleButton = document.getElementById('toggleButton');
+    const englishText = document.getElementById('englishText');
+    const devanagariText = document.getElementById('devanagariText');
+
+    toggleButton.addEventListener('click', () => {
+        if (englishText.style.display === 'none') {
+            englishText.style.display = 'block';
+            devanagariText.style.display = 'none';
+            toggleButton.innerHTML = 'Devanagari <i class="bi bi-translate"></i>';
+        } else {
+            englishText.style.display = 'none';
+            devanagariText.style.display = 'block';
+            toggleButton.innerHTML = 'English <i class="bi bi-translate"></i>';
+        }
+    });
+
+
+
+    const texts = ["India", "Bharat", "Hindustan"];
+    const textElement = document.getElementById("changing-text");
+    const cursorElement = document.getElementById("cursor");
+
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function updateText() {
+        const currentText = texts[textIndex];
+
+        if (isDeleting) {
+            textElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            textElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentText.length) {
+            isDeleting = true;
+            setTimeout(updateText, 2000);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(updateText, 2000);
+        } else {
+            setTimeout(updateText, isDeleting ? 50 : 100);
+        }
+    }
+
+    updateText();
+
+
+    // Get references to the button and iframe elements
+    const playButton = document.getElementById("playButton");
+    const youtubePlayer = document.getElementById("youtubePlayer");
+
+    playButton.addEventListener("click", function () {
+        const videoSrc = youtubePlayer.getAttribute("src");
+
+        if (videoSrc.includes("autoplay=1")) {
+            // Pause the video
+            youtubePlayer.setAttribute("src", videoSrc.replace("autoplay=1", ""));
+            playButton.innerHTML = `<i class="bi bi-play-fill bg-black rounded-5"></i> Vande Matram`;
+        } else {
+            // Play the video
+            youtubePlayer.setAttribute("src", videoSrc + "&autoplay=1");
+            playButton.innerHTML = `<i class="bi bi-pause-fill bg-black rounded-5"></i> Vande Matram`;
+        }
+    });
+
+
+</script>
+
+</html>
